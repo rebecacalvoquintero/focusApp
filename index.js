@@ -1,11 +1,14 @@
 import React from 'react';
-import { AppRegistry } from 'react-native';
+import { View, AppRegistry, Text } from 'react-native';
 import Header from './src/components/Header';
 
 const App =  () => {
   return (
-    <Header />
+    <View>
+      <Header />
+      <Text>Hello World!</Text>
+    </View>
   );
 }
 
-AppRegistry.registerComponent('Focus-phone-app', () => App);
+AppRegistry.registerComponent('focusApp', () => App);

@@ -2,6 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import focusLogo from '../assets/focusLogo.png';
 
+
 export default class Header extends React.Component {
 
     render() {
@@ -25,8 +26,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     logo: {
-        width: 250,
-        height: 50,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        marginTop: '10%'
     }
 });
