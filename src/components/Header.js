@@ -3,8 +3,10 @@ import { Image, StyleSheet, View } from 'react-native';
 import focusLogo from '../assets/focusLogo.png';
 import ToastExample from '../ToastExample';
 
+
 console.log('ToastExample', ToastExample);
 ToastExample.show('Awesome', ToastExample.SHORT);
+
 export default class Header extends React.Component {
 
     render() {

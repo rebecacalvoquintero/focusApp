@@ -1,5 +1,7 @@
 package com.focusApp;
 
+import com.focusApp.packages.ModulesPackage;
+import com.focusApp.packages.UsageStatsModule;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
@@ -24,13 +26,13 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+          new ModulesPackage(),
           new CustomToastPackage()); //
-
     }
 
     @Override
     protected String getJSMainModuleName() {
-      return "index";
+      return "index.android";
     }
   };
 
@@ -44,5 +46,4 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
   }
-
 }
