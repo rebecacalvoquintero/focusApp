@@ -1,6 +1,6 @@
 import { NativeModules } from 'react-native';
 
-console.log("inside toas", NativeModules);
 console.log("inside examples", NativeModules.ToastExample);
+console.log("stats", NativeModules.UsageStats);
 
-module.exports = NativeModules.ToastExample;
+export default NativeModules.ToastExample;

@@ -1,19 +1,24 @@
 import React from 'react';
-import { View, AppRegistry, Text, NativeModules } from 'react-native';
+import {AppRegistry, NativeModules, Text, View} from 'react-native';
 import Header from './src/components/Header';
-import apiCall from './src/apiCall';
+import ToastExample from "./src/ToastExample";
+import UsageStatsManager from "./src/components/UsageStatsManager";
 
 const UsageStats = NativeModules.UsageStats;
 
 UsageStats.testToast(UsageStats.SHORT);
 
-const App =  () => {
-  return (
-    <View>
-      <Header />
-      <Text>Hello World!</Text>
-    </View>
-  );
+console.log('ToastExample', ToastExample);
+ToastExample.show('Awesome', ToastExample.SHORT);
+
+const App = () => {
+    return (
+        <View>
+            <Header/>
+            <Text>Hello World!</Text>
+            <UsageStatsManager/>
+        </View>
+    );
 }
 
 AppRegistry.registerComponent('focusApp', () => App);

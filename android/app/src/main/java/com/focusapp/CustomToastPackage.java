@@ -13,19 +13,19 @@ import java.util.List;
 
 public class CustomToastPackage implements ReactPackage {
 
-  @Override
-  public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-    return Collections.emptyList();
-  }
+    @Override
+    public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
+        return Collections.emptyList();
+    }
 
-  @Override
-  public List<NativeModule> createNativeModules(
-                              ReactApplicationContext reactContext) {
-    List<NativeModule> modules = new ArrayList<>();
+    @Override
+    public List<NativeModule> createNativeModules(
+            ReactApplicationContext reactContext) {
+        List<NativeModule> modules = new ArrayList<>();
 
-    modules.add(new ToastModule(reactContext));
+        modules.add(new ToastModule(reactContext));
 
-    return modules;
-  }
+        return modules;
+    }
 
 }
